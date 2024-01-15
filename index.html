@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Otwarcie Serwera Discord Koty</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            background: linear-gradient(132deg, #ff0000, #1665c1);
+            background-size: 400% 400%;
+            animation: BackgroundGradient 30s ease infinite;
+        }
+        @keyframes BackgroundGradient {
+            0%{background-position: 0% 50%}
+            50%{background-position: 100% 50%}
+            100%{background-position: 0% 50%}
+        }
+        h1 {
+            color: #343a40;
+        }
+        #timer {
+            font-size: 3em;
+            color: #6c757d;
+        }
+        .countdown-wrapper {
+            border: 2px solid #6c757d;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: #e9ecef;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="countdown-wrapper">
+        <h1>Otwarcie Serwera Discord Koty</h1>
+        <p id="timer"></p>
+        <a id="link" style="display: none;" href="https://discord.gg/twój_link">Dołącz do naszego serwera!</a> <!-- Dodaj tutaj swój link do serwera Discord -->
+    </div>
+
+    <script>
+        var countDownDate = new Date("feb 1, 2024 16:00:00").getTime();
+        var x = setInterval(function() {
+            var now = new Date().getTime();
+            var remaining = countDownDate - now;
+            var days = Math.floor(remaining / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((remaining % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((remaining % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((remaining % (1000 * 60)) / 1000);
+            document.getElementById("timer").innerHTML = days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+            if (remaining < 0) {
+                clearInterval(x);
+                document.getElementById("timer").innerHTML = "SERWER JEST OTWARTY!";
+                document.getElementById("link").style.display = "block"; // Pokaż link do serwera Discord
+            }
+        }, 1000);
+    </script>
+</body>
+</html>
