@@ -1,0 +1,15 @@
+import java.awt.Desktop;
+import java.net.URI;
+
+public class OpenCatServer {
+    public static void main(String[] args) {
+        try {
+            if (Desktop.isDesktopSupported() && Desktop.getDesktop().isSupported(Desktop.Action.BROWSE)) {
+                URI uri = new URI("https://cat-server-pl.github.io/cat/");
+                Desktop.getDesktop().browse(uri);
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+}
