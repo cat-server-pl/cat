@@ -1,51 +1,13 @@
+
 <!DOCTYPE html>
 <html>
 <head>
     <title>Otwarcie Serwera Discord Koty</title>
-    <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            font-family: Arial, sans-serif;
-            margin: 0;
-            background: linear-gradient(132deg, #ff0000, #3700ff, #00d9ff, #00ff00, #eeff00, #4b0082, #8b00ff);
-            background-size: 400% 400%;
-            animation: BackgroundGradient 30s ease infinite;
-        }
-        @keyframes BackgroundGradient {
-            0%{background-position: 0% 50%}
-            50%{background-position: 100% 50%}
-            100%{background-position: 0% 50%}
-        }
-        h1 {
-            color: #000000;
-        }
-        #timer {
-            font-size: 3em;
-            color: #000000;
-        }
-        .countdown-wrapper {
-            border: 2px solid #000000;
-            padding: 4px;
-            border-radius: 15px;
-            background-color: #ffffff;
-            text-align: center;
-        }
-        footer {
-            position: fixed;
-            bottom: 0;
-            width: 100%;
-            text-align: center;
-            padding: 10px;
-            background-color: #e9ecef;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
     <div class="countdown-wrapper">
-        <h1>Otwarcie Serwera Discord Koty</h1>
+        <h1 class="het">Otwarcie Serwera Discord Koty</h1>
         <p id="timer"></p>
         <a id="link" style="display: none;" href="https://discord.gg/twój_link">Dołącz do naszego serwera!</a> <!-- Dodaj tutaj swój link do serwera Discord -->
     </div>
